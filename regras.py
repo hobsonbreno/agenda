@@ -11,24 +11,24 @@ def criartabelacontatos():
 	query = ''' create table if not exists contatos(
 			id integer primary key autoincrement,
 			nome varchar(50) not null,
-			codigo varchar(4) not null,
-			setor varchar(50) not null);
+			telefone varchar(1) not null,
+			tipo de cadastro varchar(50) not null);
 			'''
 	cursor.execute(query)
 
-def inseririd(nome,codigo,setor):
+def inseririd(nome,telefone,setor):
 	query = """insert into contatos(
-			nome, codigo, setor) 
+			nome, telefone, setor) 
 			values(
 			'{}', {}, '{}'
-			)""".format(nome, codigo, setor)
+			)""".format(nome, telefone, setor)
 	cursor.execute(query)
 	conexao.commit()
 
-def editarid(nome, vnome, codigo, vcodigo, setor, vsetor, ident):
+def editarid(nome, vnome, telefone, vtelefone, setor, vsetor, ident):
 	query = """
 	update contatos set '{}'='{}','{}'='{}','{}'='{}' where id={}
-	""".format(nome, vnome, codigo, vcodigo, setor, vsetor, ident)
+	""".format(nome, vnome, telefone, vtelefone, setor, vsetor, ident)
 	cursor.execute(query)
 	conexao.commit()
 

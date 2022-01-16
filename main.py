@@ -1,5 +1,5 @@
 from auxiliar import *
-from regras import *
+from regras import * 
 
 criartabelacontatos()
 
@@ -12,11 +12,11 @@ menu = True
 while menu:
 	atualizar()
 	system('cls')
-	print('#'*15,'| CADASTRO DE CONTATOS |',datahora(),'|','#'*15)
+	print('#'*14,'| CADASTRO DE CONTATOS |',datahora(),'|','#'*14)
 	print('#'*5,'Notificação: Seja Bem Vindo(a)! (:D). E fique à vontade.')
-	print('-----------------| Há um total de',contar(),'Contatos registrados |------------------')
-	print('ID\tNome\t\t\t\tCódigo\t\tTipo de contatos')
-	print('-'*77)
+	print('--------------------| Há um total de',contar(),'Contatos registrados |--------------------------')
+	print('ID\tNome\t\t\t\t\tTelefone\t\tTipo de contato')
+	print('-'*88)
 	if (len(selecionar()) > 0) and (paginacao == 'P'):
 		tamanho = len(selecionar())
 		vfinal = round(tamanho / 5)
@@ -34,11 +34,11 @@ while menu:
 			print("{:0>4}\t{:<30}\t{:0>4}\t\t{}".format(x[0], x[1], x[2], x[3]))
 	else:
 		zeropro()
-	print('-'*58,'[Página {:0>2} de {:0>2}]-'.format(pagi,pagf))
+	print('-'*58,'[Página {:0>2} de {:0>2}]-'.format(0,0))
 	print('[A]: Página Anterior\t\t[P]: Próxima página'.center(77))
-	print('-'*77)
-	print('[I]: Inserir contatos\t[E]: Editar contatos')
-	print('[R]: Remover contatos\t[L]: Localizar contatos')
+	print('-'*87)
+	print('[I]: Inserir Contato\t[E]: Editar Contato')
+	print('[R]: Remover Contato\t[L]: Localizar Contato')
 	print('[S]: Sair')
 	print()
 
@@ -90,7 +90,7 @@ while menu:
 			print('#'*5,'Notificação: Fique atentos aos dados. Cuidado para não errar.')
 			print('-------------------------| Adicionar novo contato |--------------------------')
 			nome = input('Nome: ')
-			codigo = input('Código: ')
+			telefone = input('Telefone: ')
 			print('----------| Setor |----------')
 			print('[1]: Cônjugue\t[2]: Namorado(a)')
 			print('[3]: Amigo(a)\t[4]: Família') 
@@ -128,12 +128,12 @@ while menu:
 				else:
 					print('Opção inválida')
 			
-			inseririd(nome, codigo, setor)
+			inseririd(nome, telefone, setor)
 			campos = localizarnome(nome) 
 			system('cls')
 			print('#'*15,'| CADASTRO DE CONTATOS |',datahora(),'|','#'*15)
 			print('#'*5,'Notificação: Seja Bem Vindo(a)! (:D). E fique à vontade.')
-			print('ID\tNome\t\t\t\tCódigo\t\tTipo de contatos')
+			print('ID\tNome\t\t\t\tCódigo\t\t\t Tipo de contato')
 			print('-'*77)
 			print('---------------------| Agenda cadastrada com sucesso |----------------------')
 			print('-'*77)
@@ -171,7 +171,7 @@ while menu:
 							print()
 							print('-----| Dados do novo contato |-----')
 							nome = input('Nome: ')
-							codigo = input('Código: ')
+							telefone = input('Código: ')
 							print('----------| Setor |----------')
 							print('[1]: Cônjugue\t[2]: Namorado(a)')
 							print('[3]: Amigo(a)\t[4]: Família') 
@@ -215,7 +215,7 @@ while menu:
 								else:
 									print('Opção inválida')
 
-							editarid('nome',nome,'codigo',codigo,'setor',setor,opcao)
+							editarid('nome',nome,'telefone',telefone,'setor',setor,opcao)
 							campos = localizarnome(nome) 
 							system('cls')
 							print('#'*15,'| CADASTRO DE CONTATOS |',datahora(),'|','#'*15)
@@ -311,7 +311,7 @@ while menu:
 					for x in campos:
 						print("{:0>4}\t{:<30}\t{:0>4}\t\t{}".format(x[0], x[1], x[2], x[3]))
 					print('-'*77)
-					print('------------------------| Agenda(s) encontrada(s) |-------------------------')
+					print('------------------------| Contato(s) encontrado(s) |-------------------------')
 					print('-'*77)
 					sleep(1)
 					input('\nTecle ENTER para retornar a tela principal.')
