@@ -7,8 +7,8 @@ import sqlite3
 conexao = sqlite3.connect("agenda.db")
 cursor = conexao.cursor()
 
-def criartabelacontato():
-	query = ''' create table if not exists contato(
+def criartabelacontatos():
+	query = ''' create table if not exists contatos(
 			id integer primary key autoincrement,
 			nome varchar(50) not null,
 			codigo varchar(4) not null,

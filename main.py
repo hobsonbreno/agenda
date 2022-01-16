@@ -86,7 +86,7 @@ while menu:
 				
 		elif opcao == 'I' or opcao == 'i':
 			system('cls')
-			print('#'*15,'| CADASTRO DE CONTATOS |',datahora(),'|','#'*15)
+			print('#'*15,'| CADASTRO DE CONTATO |',datahora(),'|','#'*15)
 			print('#'*5,'Notificação: Fique atentos aos dados. Cuidado para não errar.')
 			print('-------------------------| Adicionar novo contato |--------------------------')
 			nome = input('Nome: ')
@@ -135,7 +135,7 @@ while menu:
 			print('#'*5,'Notificação: Seja Bem Vindo(a)! (:D). E fique à vontade.')
 			print('ID\tNome\t\t\t\tCódigo\t\tTipo de contatos')
 			print('-'*77)
-			print('---------------------| Contatos cadastrados com sucesso |----------------------')
+			print('---------------------| Agenda cadastrada com sucesso |----------------------')
 			print('-'*77)
 			for x in campos:
 				print("{:0>4}\t{:<30}\t{:0>4}\t\t{}".format(x[0], x[1], x[2], x[3]))
