@@ -1,4 +1,4 @@
-# Metodos e funções a serem usadas no cad contatos
+# Metodos e funções ultilizadas no cad contatos.
 
 from datetime import datetime
 from os import system
