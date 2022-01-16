@@ -340,8 +340,8 @@ while menu:
 			option = False
 
 conexao.close()	
-msntempo(0.3,'Desonectando o banco de dados.','CADASTRO DE CONTATOS')
-msntempo(0.2,'Encerrando Programa.','CADASTRO DE CONTATOS')
+msntempo(0.1,'Desonectando o banco de dados.','CADASTRO DE CONTATOS')
+msntempo(0.1,'Encerrando Programa.','CADASTRO DE CONTATOS')
 print('#'*15,'| CADASTRO DE CONTATOS |',datahora(),'|','#'*15)
 print('#'*5,'Notificação: Aguardamos sua volta! (:D).')
 print('#'*28,'Programa Encerrado!','#'*28)
