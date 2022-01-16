@@ -3,8 +3,8 @@ from regras import *
 
 criartabelacontatos()
 
-msntempo(0.2,'Inicializando Programa.','CADASTRO DE CONTATOS')
-msntempo(0.3,'Conectando o banco de dados.','CADASTRO DE CONTATOS')
+msntempo(0.1,'Inicializando Programa.','CADASTRO DE CONTATOS')
+msntempo(0.1,'Conectando o banco de dados.','CADASTRO DE CONTATOS')
 
 paginacao = 'P'
 
@@ -163,7 +163,7 @@ while menu:
 						achou = len(procurarid(opcao))
 						if achou == 1:
 							print('-----| Dados do contato para atualizar  |-----')
-							print('ID\tNome\t\t\t\tCódigo\t\tTipo de contato')
+							print('ID\tNome\t\t\t\t\tTelefone\t\tTipo de contato')
 							print('-'*77)
 							c = procurarid(opcao)
 							for x in c:
@@ -220,7 +220,7 @@ while menu:
 							system('cls')
 							print('#'*15,'| CADASTRO DE CONTATOS |',datahora(),'|','#'*15)
 							print('#'*5,'Notificação: Seja Bem Vindo(a)! (:D). E fique à vontade.')
-							print('ID\tNome\t\t\t\tCódigo\t\tTipo de contato')
+							print('ID\tNome\t\t\t\t\tTelefone\t\tTipo de contato')
 							print('-'*77)
 							print('---------------------| Contato Atualizado com sucesso |----------------------')
 							print('-'*77)
@@ -258,7 +258,7 @@ while menu:
 						achou = len(procurarid(opcao))
 						if achou == 1:
 							print('-----| Dados do contato a remover |-----')
-							print('ID\tNome\t\t\t\tCódigo\t\tTipo de contato')
+							print('ID\tNome\t\t\t\t\tTelefone\t\tTipo de contato')
 							print('-'*77)
 							c = procurarid(opcao)
 							for x in c:
@@ -340,8 +340,8 @@ while menu:
 			option = False
 
 conexao.close()	
-msntempo(0.3,'Desonectando o banco de dados.','CADASTRO DE AGENDA')
-msntempo(0.2,'Encerrando Programa.','CADASTRO DE AGENDA')
+msntempo(0.1,'Desonectando o banco de dados.','CADASTRO DE AGENDA')
+msntempo(0.1,'Encerrando Programa.','CADASTRO DE AGENDA')
 print('#'*15,'| CADASTRO DE AGENDA |',datahora(),'|','#'*15)
 print('#'*5,'Notificação: Aguardamos sua volta! (:D).')
 print('#'*28,'Programa Encerrado!','#'*28)
