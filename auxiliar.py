@@ -1,4 +1,4 @@
-# Metodos e funções ultilizadas no cad contatos.
+# Metodos e funções ultilizadas no cad agenda.
 
 from datetime import datetime
 from os import system
@@ -20,30 +20,30 @@ def msntempo(temp, msn, titulo):
 	system('cls')
 
 def zeropro():
-	print('Não há contatos cadastrados!'.center(77))
-	print('cadastre um contato.'.center(77)) 
+	print('Não há agenda cadastrados!'.center(77))
+	print('cadastre uma agenda.'.center(77)) 
 
 def atualizarzero():
 	system('cls')
 	print('#'*15,'| AGENDA TELEFONICA |',datahora(),'|','#'*15)
-	print('#'*5,'Notificação: Não sabe o ID do Contato? Volte ao inicio e pesquise.')
-	print('----------------------| Atualizar contato existente |------------------------')
-	print('Não há contatos cadastrados!'.center(77))
+	print('#'*5,'Notificação: Não sabe o ID da agenda? Volte ao inicio e pesquise.')
+	print('----------------------| Atualizar agenda existente |------------------------')
+	print('Não há agenda cadastrados!'.center(77))
 	print('Portanto não há o que atualizar.'.center(77))
 	print('Retornando tela inicial'.center(77))
 	print('-'*77)
 	sleep(2) 
-	msntempo(0.5,'Retornando tela inicial','CADASTRO DE CONTATOS')
+	msntempo(0.5,'Retornando tela inicial','CADASTRO DE AGENDA')
 
 def removerzero():
 	system('cls')
-	print('#'*15,'| CADASTRO DE CONTATOS |',datahora(),'|','#'*15)
-	print('#'*5,'Notificação: Não sabe o ID do Contato? Volte ao inicio e pesquise.')
-	print('------------------------| Remover contato existente |------------------------')
-	print('Não há contatos cadastrados!'.center(77))
+	print('#'*15,'| CADASTRO DE AGENDA |',datahora(),'|','#'*15)
+	print('#'*5,'Notificação: Não sabe o ID da agenda? Volte ao inicio e pesquise.')
+	print('------------------------| Remover agenda existente |------------------------')
+	print('Não há agenda cadastrados!'.center(77))
 	print('Portanto não há o que remover.'.center(77)) 
 	print('Retornando tela inicial'.center(77))
 	print('-'*77)
 	sleep(2) 
-	msntempo(0.5,'Retornando tela inicial','CADASTRO DE CONTATOS')
+	msntempo(0.5,'Retornando tela inicial','CADASTRO DE AGENDA')
 	

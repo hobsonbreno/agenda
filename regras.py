@@ -4,11 +4,11 @@ contatos relacionado ao bd
 '''
 import sqlite3
 
-conexao = sqlite3.connect("contatos.db")
+conexao = sqlite3.connect("agenda.db")
 cursor = conexao.cursor()
 
-def criartabelacontatos():
-	query = ''' create table if not exists contatos(
+def criartabelacontato():
+	query = ''' create table if not exists contato(
 			id integer primary key autoincrement,
 			nome varchar(50) not null,
 			codigo varchar(4) not null,
